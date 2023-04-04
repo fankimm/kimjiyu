@@ -21,10 +21,7 @@ export default function Home() {
           {arr.map((item) => (
             <Card key={item.filename}>
               <Image
-                src={
-                  "https://github.com/fankimm/kimjiyu/tree/main/public/gallery/" +
-                  item.filename
-                }
+                src={"/gallery/" + item.filename}
                 width={200}
                 height={200}
                 alt="gal"
