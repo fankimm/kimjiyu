@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.css";
 import Card from "@/components/card";
 
 export default function Home() {
-  const arr = [1, 2, 3, 4, 5,6,7,8,9,10,11,12,13,14];
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   return (
     <>
       <Head>
@@ -13,7 +13,147 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {arr.map(item => <Card key={item}>{item}</Card>)}
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sed
+          quam doloremque commodi consectetur aspernatur unde cum error possimus
+          numquam earum beatae reiciendis, voluptatem nobis praesentium ducimus
+          eos! Delectus, iusto?
+        </div>
+        {arr.map((item) => (
+          <Card key={item}>{item}</Card>
+        ))}
       </main>
     </>
   );
