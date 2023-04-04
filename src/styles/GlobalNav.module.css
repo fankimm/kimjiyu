@@ -2,14 +2,15 @@
   height: var(--nav-height);
   background: var(--light-background);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
-  padding: 0 50px;
+  padding: 0 10%;
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   z-index: 9999;
 }
@@ -23,8 +24,11 @@
   justify-content: flex-end;
   gap: 5px;
 }
-
+.logoName{
+  white-space: nowrap;
+}
 .logoDescription {
+  white-space: nowrap;
   font-size: 11px;
   font-weight: 400;
 }
@@ -38,4 +42,13 @@
 .logo:hover,
 .menu > a:hover {
   color: var(--light-font-color);
+}
+
+@media (max-width: 700px) {
+  .globalNav{
+    padding: 10px;
+  }
+  .menu {
+    display: none;
+  }
 }
