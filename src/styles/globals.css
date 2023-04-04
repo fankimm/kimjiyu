@@ -1,5 +1,18 @@
 :root {
   --nav-height: 50px;
+  --light-background: rgba(255, 255, 255, 0.9);
+  --light-font-color: rgba(0, 0, 0, 0.4);
+  --background: rgba(0, 0, 0, 0.04);
+  --font-color: rgba(0, 0, 0, 0.65);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light-background: rgba(0, 0, 0, 0.8);
+    --light-font-color: white;
+    --background: rgba(0, 0, 0, 0.8);
+    --font-color: white;
+  }
 }
 
 * {
@@ -16,8 +29,8 @@ body {
 
 body {
   font-family: "appleSF";
-  color: rgb(0, 0, 0, 0.7);
-  background: #f5f5f7;
+  color: var(--font-color);
+  background: var(--background)
 }
 
 a {
@@ -27,5 +40,5 @@ a {
 
 @font-face {
   font-family: "appleSF";
-  src: url("/fonts/SFProKRDisplay_regular");
+  src: url("/fonts/sfpro.woff2") format("woff2");
 }

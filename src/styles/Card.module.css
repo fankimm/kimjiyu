@@ -1,11 +1,20 @@
 .card {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.cardContents:hover {
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.16);
+  transform: scale3d(1.03, 1.03, 1.03);
+}
+.cardContents {
   background: white;
   border-radius: 10px;
   width: 200px;
   height: 200px;
   overflow: hidden;
 }
-.card:hover {
-  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.16);
-  transform: scale3d(1.01, 1.01, 1.01);
+.cardDiscription {
+  font-size: 12px;
+  color: var(--light-font-color);
 }
