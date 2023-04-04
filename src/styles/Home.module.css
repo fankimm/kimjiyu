@@ -29,12 +29,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo,
-  .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  .main {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
   }
 }

@@ -5,7 +5,7 @@
   /* justify-content: space-between; */
   align-items: center;
   position: fixed;
-  padding: 0 30px;
+  padding: 0 50px;
   top: 0;
   left: 0;
   width: 100%;
@@ -38,4 +38,11 @@
 
 .logo:hover, .menu > a:hover {
   color: rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  .globalNav {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+  }
 }
