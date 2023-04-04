@@ -26,8 +26,7 @@ export default function Home() {
             <Card key={item.filename}>
               <Image
                 src={"/gallery/" + item.filename}
-                width={200}
-                height={200}
+                layout="fill"
                 alt="gal"
                 onClick={() => {
                   setcurrentFileName(item.filename);
@@ -40,8 +39,7 @@ export default function Home() {
         <Modal visible={modalVisible} setVisible={setmodalVisible}>
           <Image
             src={"/gallery/" + currentFileName}
-            width={600}
-            height={600}
+            fill
             alt="gal"
             onClick={() => {
               setcurrentFileName(currentFileName);
