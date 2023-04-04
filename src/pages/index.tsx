@@ -22,8 +22,8 @@ export default function Home() {
             <Card key={item.filename}>
               <Image
                 src={"/gallery/" + item.filename}
-                width={100}
-                height={100}
+                width={200}
+                height={200}
                 alt="gal"
               ></Image>
             </Card>
