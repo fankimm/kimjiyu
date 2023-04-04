@@ -15,7 +15,7 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
+  font-family: "appleSF";
 }
 
 .description a {
@@ -37,6 +37,10 @@
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
+}
+.test {
+  font-weight: 700;
+  font-family: "appleSF";
 }
 
 .grid {
@@ -97,7 +101,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -125,7 +129,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
