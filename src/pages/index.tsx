@@ -1,11 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Card from "@/components/card";
 
 export default function Home() {
+  const arr = [1, 2, 3, 4, 5,6,7,8,9,10,11,12,13,14];
   return (
     <>
       <Head>
@@ -15,6 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        {arr.map(item => <Card key={item}>{item}</Card>)}
       </main>
     </>
   );

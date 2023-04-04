@@ -1,0 +1,12 @@
+.globalNav {
+  height: 44px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
