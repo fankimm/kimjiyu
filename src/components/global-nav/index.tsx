@@ -5,7 +5,7 @@ const GlobalNav = () => {
   return (
     <nav className={styles.globalNav}>
       <Logo />
-      <Menu />
+      {/* <Menu /> */}
     </nav>
   );
 };
