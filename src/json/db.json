@@ -1,74 +1,466 @@
 [
-  { "filename": "0.jpg", "color": "rgba(0,0,0,0.8)" },
-  { "filename": "1.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "2.jpg" },
-  { "filename": "3.jpg" },
-  { "filename": "4.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "5.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "6.jpg" },
-  { "filename": "7.jpg" },
-  { "filename": "8.jpg" },
-  { "filename": "9.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "10.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "11.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "12.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "13.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "14.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "15.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "16.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "17.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "18.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "19.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "20.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "21.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "22.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "23.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "24.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "25.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "26.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "27.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "28.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "29.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "30.jpg" },
-  { "filename": "31.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "32.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "33.jpg" },
-  { "filename": "34.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "35.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "36.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "37.jpg" },
-  { "filename": "38.jpg" },
-  { "filename": "39.jpg" },
-  { "filename": "40.jpg" },
-  { "filename": "41.jpg" },
-  { "filename": "42.jpg" },
-  { "filename": "43.jpg" },
-  { "filename": "44.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "45.jpg", "color": "rgba(0,0,0,0.4)" },
-  { "filename": "46.jpg" },
-  { "filename": "47.jpg" },
-  { "filename": "48.jpg" },
-  { "filename": "49.jpg" },
-  { "filename": "50.jpg" },
-  { "filename": "51.jpg" },
-  { "filename": "52.jpg" },
-  { "filename": "53.jpg" },
-  { "filename": "54.jpg" },
-  { "filename": "55.jpg" },
-  { "filename": "56.jpg" },
-  { "filename": "57.jpg" },
-  { "filename": "58.jpg" },
-  { "filename": "59.jpg" },
-  { "filename": "60.jpg" },
-  { "filename": "61.jpg" },
-  { "filename": "62.jpg" },
-  { "filename": "63.jpg" },
-  { "filename": "64.jpg" },
-  { "filename": "65.jpg" },
-  { "filename": "66.jpg" },
-  { "filename": "67.jpg" },
-  { "filename": "68.jpg" },
-  { "filename": "69.jpg" },
-  { "filename": "70.jpg" },
-  { "filename": "71.jpg" }
+  {
+    "filename": "0.jpg",
+    "color": "rgba(0,0,0,0.8)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "1.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "2.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "3.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "4.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "5.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "6.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "7.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Marker"
+  },
+  {
+    "filename": "8.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "9.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Marker"
+  },
+  {
+    "filename": "10.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "11.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Marker"
+  },
+  {
+    "filename": "12.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "13.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "14.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "15.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Sticker Collage"
+  },
+  {
+    "filename": "16.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "17.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Marker"
+  },
+  {
+    "filename": "18.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Charcoal"
+  },
+  {
+    "filename": "19.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Charcoal"
+  },
+  {
+    "filename": "20.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Marker"
+  },
+  {
+    "filename": "21.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Marker"
+  },
+  {
+    "filename": "22.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu, Kim Jihwan",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "23.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "24.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "25.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Charcoal"
+  },
+  {
+    "filename": "26.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "27.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "28.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "29.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "30.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "31.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker & Charcoal"
+  },
+  {
+    "filename": "32.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "33.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Charcoal"
+  },
+  {
+    "filename": "34.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Charcoal"
+  },
+  {
+    "filename": "35.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Charcoal"
+  },
+  {
+    "filename": "36.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Charcoal & Marker"
+  },
+  {
+    "filename": "37.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "38.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "39.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "40.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "41.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "42.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "43.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "44.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "45.jpg",
+    "color": "rgba(0,0,0,0.4)",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "46.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "47.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "48.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method":"Marker"
+  },
+  {
+    "filename": "49.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method":"Marker"
+  },
+  {
+    "filename": "50.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method":"Marker"
+  },
+  {
+    "filename": "51.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "52.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "53.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "54.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "55.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "56.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "57.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "58.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "59.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "60.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "61.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Marker"
+  },
+  {
+    "filename": "62.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil & Marker"
+  },
+  {
+    "filename": "63.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "64.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "65.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "66.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "67.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "68.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "69.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "70.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  },
+  {
+    "filename": "71.jpg",
+    "author": "Kim Jiyu",
+    "canvas": "150x150mm Color paper",
+    "method": "Color pencil"
+  }
 ]

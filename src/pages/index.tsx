@@ -6,6 +6,9 @@ import Modal from "@/components/modal";
 export interface IData {
   filename: string;
   color?: string;
+  author:string;
+  canvas:string;
+  method:string;
 }
 import db from "@/json/db.json";
 export default function Home() {
@@ -20,7 +23,7 @@ export default function Home() {
       <div className={styles.galleryContainer}>
         {data?.map((item) => (
           <>
-            <Card key={item.filename}>
+            <Card key={item.filename} selectedData={selectedData}>
               <Image
                 src={"/gallery/" + item.filename}
                 fill

@@ -4,6 +4,7 @@
   flex-direction: column;
 }
 .cardContents:hover {
+  cursor: pointer;
   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.16);
   transform: scale3d(1.03, 1.03, 1.03);
 }

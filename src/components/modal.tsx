@@ -1,9 +1,10 @@
-import { IData } from "@/pages/150x150";
+
+import { IData } from "@/pages";
 import styles from "@/styles/Modal.module.css";
 import { Dispatch, ReactNode, SetStateAction } from "react";
 const Modal = (props: {
   children: ReactNode;
-  selectedData:IData | undefined;
+  selectedData: IData | undefined;
   visible: boolean;
   setVisible: Dispatch<SetStateAction<boolean>>;
 }) => {
@@ -17,10 +18,13 @@ const Modal = (props: {
       >
         <div className={styles.modalContents}>
           {props.children}
-          <div className={styles.modalDescription} style={{color:props?.selectedData?.color || 'white'}}>
-            <div>150x150mm Color paper</div>
-            <div>Color Pencil Drawing</div>
-            <div>Kim Jiyu</div>
+          <div
+            className={styles.modalDescription}
+            style={{ color: props?.selectedData?.color || "white" }}
+          >
+            <div>{props.selectedData?.canvas || 'unknown'}</div>
+            <div>{props?.selectedData?.method|| 'unknown'}</div>
+            <div>{props?.selectedData?.author|| 'unknown'}</div>
           </div>
         </div>
       </div>
