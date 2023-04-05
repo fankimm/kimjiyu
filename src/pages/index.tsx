@@ -46,7 +46,7 @@ export default function Home() {
           fill
           alt="gal"
           style={{
-            // objectFit: "scale-down",
+            objectFit: "contain",
             objectPosition: "center",
           }}
           onClick={() => {
