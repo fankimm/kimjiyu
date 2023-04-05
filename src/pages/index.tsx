@@ -2,16 +2,20 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Card from "@/components/card";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "@/components/modal";
-
+export interface IData {
+  filename: string;
+  color?: string;
+}
+import db from "@/json/db.json";
 export default function Home() {
   const [modalVisible, setmodalVisible] = useState(false);
-  const [currentFileName, setcurrentFileName] = useState("");
-  const arr = [];
-  for (let i = 0; i < 72; i++) {
-    arr.push({ filename: `${i}.jpg` });
-  }
+  const [selectedData, setSelectedData] = useState<IData | undefined>();
+  const [data, setData] = useState<IData[] | undefined>();
+  useEffect(() => {
+    setData(db);
+  }, []);
   return (
     <>
       <Head>
@@ -29,27 +33,29 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.galleryContainer}>
-          {arr.map((item) => (
-            <Card key={item.filename}>
-              <Image
-                src={"/gallery/" + item.filename}
-                layout="fill"
-                alt="gal"
-                onClick={() => {
-                  setcurrentFileName(item.filename);
-                  setmodalVisible(true);
-                }}
-              ></Image>
-            </Card>
+          {data?.map((item) => (
+            <>
+              <Card key={item.filename} >
+                <Image
+                  src={"/gallery/" + item.filename}
+                  fill
+                  alt="gal"
+                  onClick={() => {
+                    setSelectedData(item);
+                    setmodalVisible(true);
+                  }}
+                ></Image>
+              </Card>
+            </>
           ))}
         </div>
-        <Modal visible={modalVisible} setVisible={setmodalVisible}>
+        <Modal visible={modalVisible} setVisible={setmodalVisible} selectedData={selectedData}>
           <Image
-            src={"/gallery/" + currentFileName}
+            src={"/gallery/" + selectedData?.filename}
             fill
             alt="gal"
             onClick={() => {
-              setcurrentFileName(currentFileName);
+              setSelectedData(selectedData);
               setmodalVisible(true);
             }}
           ></Image>
