@@ -9,6 +9,7 @@
   transform: scale3d(1.03, 1.03, 1.03);
 }
 .cardContents {
+  transition: all .3s;
   position: relative;
   background: white;
   border-radius: 10px;
