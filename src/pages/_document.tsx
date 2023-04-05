@@ -6,7 +6,6 @@ export default function Document() {
       <title>KIM JIYU</title>
       <Head>
         <meta name="description" content="Drawing by Kim Jiyu" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="KIMJIYU.COM" />
         <meta property="og:description" content="Drawing by Kim Jiyu" />
         <meta property="og:url" content="https://www.kimjiyu.com" />
