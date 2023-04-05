@@ -23,7 +23,7 @@
 
 @media (max-width: 700px) {
   .cardContents {
-    width: 300px;
-    height: 300px;
+    width: 20rem;
+    height: 20rem;
   }
 }
