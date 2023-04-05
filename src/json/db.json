@@ -1,5 +1,5 @@
 [
-  { "filename": "0.jpg" },
+  { "filename": "0.jpg", "color": "rgba(0,0,0,0.8)" },
   { "filename": "1.jpg", "color": "rgba(0,0,0,0.4)" },
   { "filename": "2.jpg" },
   { "filename": "3.jpg" },
