@@ -16,8 +16,8 @@
 
 .modalContents {
   overflow: hidden;
-  width: 750px;
-  height: 750px;
+  width: 720px;
+  height: 720px;
   position: fixed;
   background: white;
   top: 50%;

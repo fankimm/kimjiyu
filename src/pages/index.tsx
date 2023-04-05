@@ -44,10 +44,9 @@ export default function Home() {
         <Image
           src={"/gallery/" + selectedData?.filename}
           fill
-          sizes="100%"
           alt="gal"
           style={{
-            objectFit: "scale-down",
+            // objectFit: "scale-down",
             objectPosition: "center",
           }}
           onClick={() => {
