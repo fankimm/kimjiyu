@@ -12,7 +12,7 @@
   -webkit-backdrop-filter: saturate(180%) blur(5px);
   backdrop-filter: saturate(180%) blur(5px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  z-index: 1;
+  z-index: 2;
 }
 .logo {
   margin-right: 100px;

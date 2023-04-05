@@ -43,6 +43,10 @@ export default function Home() {
           src={"/gallery/" + selectedData?.filename}
           fill
           alt="gal"
+          style={{
+            objectFit: "scale-down",
+            objectPosition: "center",
+          }}
           onClick={() => {
             setSelectedData(selectedData);
             setmodalVisible(true);
