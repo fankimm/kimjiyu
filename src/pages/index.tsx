@@ -23,7 +23,7 @@ export default function Home() {
       <div className={styles.galleryContainer}>
         {data?.map((item) => (
           <>
-            <Card key={item.filename} selectedData={selectedData}>
+            <Card key={item.filename} cardContentData={item}>
               <Image
                 src={"/gallery/" + item.filename}
                 fill

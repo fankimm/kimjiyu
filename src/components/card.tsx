@@ -4,12 +4,14 @@ import React, { ReactNode } from "react";
 
 const Card = (props: {
   children: ReactNode;
-  selectedData: IData | undefined;
+  cardContentData: IData | undefined;
 }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardContents}>{props.children}</div>
-      <div className={styles.cardDiscription}>{props?.selectedData?.canvas}</div>
+      <div className={styles.cardDiscription}>
+        {props?.cardContentData?.canvas}
+      </div>
     </div>
   );
 };
