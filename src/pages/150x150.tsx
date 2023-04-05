@@ -8,6 +8,7 @@ export interface IData {
   color?: string;
 }
 import db from "@/json/db.json";
+import Head from "next/head";
 export default function Home() {
   const [modalVisible, setmodalVisible] = useState(false);
   const [selectedData, setSelectedData] = useState<IData | undefined>();
