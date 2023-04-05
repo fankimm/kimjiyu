@@ -1,4 +1,3 @@
-import Head from "next/head";
 import styles from "@/styles/150.module.css";
 import Card from "@/components/card";
 import Image from "next/image";
@@ -18,47 +17,38 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Head>
-        <title>KIM JIYU</title>
-        <meta name="description" content="Drawing by Kim Jiyu" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="KIMJIYU.COM" />
-        <meta property="og:description" content="Drawing by Kim Jiyu" />
-        <meta property="og:url" content="https://www.kimjiyu.com" />
-        <meta
-          property="og:image"
-          content="https://www.kimjiyu.com/_next/image?url=%2Fgallery%2F2.jpg&w=3840&q=75"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-        <div className={styles.galleryContainer}>
-          {data?.map((item) => (
-            <>
-              <Card key={item.filename} >
-                <Image
-                  src={"/gallery/" + item.filename}
-                  fill
-                  alt="gal"
-                  onClick={() => {
-                    setSelectedData(item);
-                    setmodalVisible(true);
-                  }}
-                ></Image>
-              </Card>
-            </>
-          ))}
-        </div>
-        <Modal visible={modalVisible} setVisible={setmodalVisible} selectedData={selectedData}>
-          <Image
-            src={"/gallery/" + selectedData?.filename}
-            fill
-            alt="gal"
-            onClick={() => {
-              setSelectedData(selectedData);
-              setmodalVisible(true);
-            }}
-          ></Image>
-        </Modal>
+      <div className={styles.galleryContainer}>
+        {data?.map((item) => (
+          <>
+            <Card key={item.filename}>
+              <Image
+                src={"/gallery/" + item.filename}
+                fill
+                alt="gal"
+                onClick={() => {
+                  setSelectedData(item);
+                  setmodalVisible(true);
+                }}
+              ></Image>
+            </Card>
+          </>
+        ))}
+      </div>
+      <Modal
+        visible={modalVisible}
+        setVisible={setmodalVisible}
+        selectedData={selectedData}
+      >
+        <Image
+          src={"/gallery/" + selectedData?.filename}
+          fill
+          alt="gal"
+          onClick={() => {
+            setSelectedData(selectedData);
+            setmodalVisible(true);
+          }}
+        ></Image>
+      </Modal>
     </>
   );
 }

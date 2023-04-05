@@ -1,4 +1,4 @@
-import { IData } from "@/pages";
+import { IData } from "@/pages/150x150";
 import styles from "@/styles/Modal.module.css";
 import { Dispatch, ReactNode, SetStateAction } from "react";
 const Modal = (props: {
