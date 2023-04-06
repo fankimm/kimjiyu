@@ -10,25 +10,23 @@ export interface IData {
   canvas: string;
   method: string;
   priority?: boolean;
+  liked: string[];
 }
 import db from "@/json/db.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import uuid from "react-uuid";
 export default function Home() {
   const [modalVisible, setmodalVisible] = useState(false);
   const [selectedData, setSelectedData] = useState<IData | undefined>();
   const [data, setData] = useState<IData[] | undefined>();
   useEffect(() => {
+    const id = localStorage.getItem("id");
+    if (!id) {
+      localStorage.setItem("id", uuid());
+    }
     setData(db);
   }, []);
   return (
     <>
-      <FontAwesomeIcon
-        className={styles.modalLike}
-        icon={faHeart}
-        // rotation={90}
-        size="xs"
-      />
       <div className={styles.galleryContainer}>
         {data?.map((item) => (
           <Card key={item.filename} cardContentData={item}>
@@ -50,9 +48,11 @@ export default function Home() {
         ))}
       </div>
       <Modal
+        data={data}
+        setData={setData}
         visible={modalVisible}
         setVisible={setmodalVisible}
-        selectedData={selectedData}
+        filename={selectedData?.filename || ""}
       >
         <Image
           className={styles.modalImage}

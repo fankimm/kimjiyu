@@ -24,6 +24,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px;
+  user-select: none;
 }
 
 .modalDescription {
@@ -36,7 +37,7 @@
 }
 
 .modalLike {
-  position: fixed;
+  position: absolute;
   bottom: 5%;
   right: 5%;
   z-index: 5;

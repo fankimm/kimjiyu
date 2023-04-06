@@ -21,9 +21,10 @@
   flex-direction: row;
   align-items: center;
   gap: 5px;
-  transition: all .3s;
+  transition: all 0.3s;
+  white-space: nowrap;
 }
-.logoName{
+.logoName {
   white-space: nowrap;
 }
 .logoDescription {
@@ -44,7 +45,7 @@
 }
 
 @media (max-width: 700px) {
-  .globalNav{
+  .globalNav {
     padding: 10px;
   }
   .menu {

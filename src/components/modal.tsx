@@ -1,41 +1,89 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IData } from "@/pages";
 import styles from "../styles/Modal.module.css";
-import { Dispatch, ReactNode, SetStateAction } from "react";
+import {
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 const Modal = (props: {
   children: ReactNode;
-  selectedData: IData | undefined;
   visible: boolean;
   setVisible: Dispatch<SetStateAction<boolean>>;
+  setData: Dispatch<SetStateAction<IData[] | undefined>>;
+  data: IData[] | undefined;
+  filename: string;
 }) => {
-  if (props.visible) {
+  const { children, visible, setVisible, setData, data, filename } = props;
+  const dataOnlyAboutThis = data?.find((item) => item.filename === filename);
+  const [id, setId] = useState("");
+  useEffect(() => {
+    const idFromLocalStorage = localStorage.getItem("id");
+    if (idFromLocalStorage) {
+      setId(idFromLocalStorage);
+    }
+  }, []);
+  if (visible) {
     return (
       <div
         className={styles.modalBackground}
-        onClick={() => {
-          props.setVisible(false);
+        onClick={(e) => {
+          if (e.target === e.currentTarget) {
+            setVisible(false);
+          }
         }}
       >
         <div className={styles.modalContents}>
-          <FontAwesomeIcon
-            className={styles.modalLike}
-            icon={faHeart}
-            size="lg"
-            style={{ color: "red" }}
-            onClick={() => {
-              alert("hello");
+          <div
+            style={{ width: "50px" }}
+            onClick={(e) => {
+              console.log("clicked");
+              setData((prev) => {
+                return prev?.map((p) => {
+                  if (p.filename === dataOnlyAboutThis?.filename) {
+                    const id = localStorage.getItem("id");
+                    if (id) {
+                      const isAlreadyLiked = p.liked.includes(id);
+                      return {
+                        ...p,
+                        liked: isAlreadyLiked
+                          ? p.liked.filter((l) => l !== id)
+                          : [...p.liked, id],
+                      };
+                    }
+                  }
+                  return p;
+                });
+              });
             }}
-          />
-          {props.children}
+          >
+            <FontAwesomeIcon
+              className={styles.modalLike}
+              icon={faHeart}
+              size="2xl"
+              style={{
+                color: data
+                  ?.find(
+                    (item) => item.filename === dataOnlyAboutThis?.filename
+                  )
+                  ?.liked.includes(id)
+                  ? "red"
+                  : dataOnlyAboutThis?.color,
+              }}
+            />
+          </div>
+          {children}
           <div
             className={styles.modalDescription}
-            style={{ color: props?.selectedData?.color || "white" }}
+            style={{ color: dataOnlyAboutThis?.color || "white" }}
           >
             <div>
-              <div>{props.selectedData?.canvas || "unknown"}</div>
-              <div>{props?.selectedData?.method || "unknown"}</div>
-              <div>{props?.selectedData?.author || "unknown"}</div>
+              <div>{dataOnlyAboutThis?.canvas || "unknown"}</div>
+              <div>{dataOnlyAboutThis?.method || "unknown"}</div>
+              <div>{dataOnlyAboutThis?.author || "unknown"}</div>
             </div>
           </div>
         </div>
