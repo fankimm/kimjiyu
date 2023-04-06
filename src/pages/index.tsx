@@ -1,4 +1,4 @@
-import styles from "@/styles/150.module.css";
+import styles from "../styles/Home.module.css";
 import Card from "@/components/card";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -25,10 +25,13 @@ export default function Home() {
         {data?.map((item) => (
           <Card key={item.filename} cardContentData={item}>
             <Image
+              className={styles.cardImage}
               priority={item.priority ?? false}
               src={"/gallery/" + item.filename}
               fill
-              sizes="100%"
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
               alt="gal"
               onClick={() => {
                 setSelectedData(item);
@@ -44,13 +47,13 @@ export default function Home() {
         selectedData={selectedData}
       >
         <Image
+          className={styles.modalImage}
           src={"/gallery/" + selectedData?.filename}
           fill
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           alt="gal"
-          style={{
-            objectFit: "contain",
-            objectPosition: "center",
-          }}
           onClick={() => {
             setSelectedData(selectedData);
             setmodalVisible(true);

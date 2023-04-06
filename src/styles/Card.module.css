@@ -9,7 +9,7 @@
   transform: scale3d(1.03, 1.03, 1.03);
 }
 .cardContents {
-  transition: all .3s;
+  transition: all 0.3s;
   position: relative;
   background: white;
   border-radius: 10px;
@@ -20,6 +20,11 @@
 .cardDiscription {
   font-size: 12px;
   color: var(--light-font-color);
+}
+
+.cardImage {
+  object-fit: scale-down;
+  object-position: center;
 }
 
 @media (max-width: 700px) {
