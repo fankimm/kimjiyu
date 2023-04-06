@@ -17,14 +17,8 @@ const Modal = (props: {
 }) => {
   const { children, visible, setVisible, setData, data, id } = props;
   const dataOnlyAboutThis = data?.find((item) => item.id === id);
-  const [userId, setUserId] = useState("");
-  useEffect(() => {
-    const idFromLocalStorage = localStorage.getItem("userId");
-    if (idFromLocalStorage) {
-      setUserId(idFromLocalStorage);
-    }
-  }, []);
   const handleLikeClick = async () => {
+    const userId = localStorage.getItem("userId");
     if (!userId) {
       alert("userId not found");
       return;
@@ -79,7 +73,9 @@ const Modal = (props: {
             onClick={handleLikeClick}
             className={styles.modalLike}
             style={{
-              color: dataOnlyAboutThis?.liked.find((l) => l.userId === userId)
+              color: dataOnlyAboutThis?.liked.find(
+                (l) => l.userId === localStorage.getItem("userId")
+              )
                 ? "red"
                 : dataOnlyAboutThis?.color,
             }}

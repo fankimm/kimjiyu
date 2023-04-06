@@ -8,6 +8,7 @@ import uuid from "react-uuid";
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const userId = localStorage.getItem("userId");
+    console.log(userId);
     if (!userId) {
       localStorage.setItem("userId", uuid());
     }
