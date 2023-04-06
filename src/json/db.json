@@ -19,52 +19,45 @@
     "filename": "2.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil",
-    "priority": true
+    "method": "Color pencil"
   },
   {
     "filename": "3.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil",
-    "priority": true
+    "method": "Color pencil"
   },
   {
     "filename": "4.jpg",
     "color": "rgba(0,0,0,0.4)",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil",
-    "priority": true
+    "method": "Color pencil"
   },
   {
     "filename": "5.jpg",
     "color": "rgba(0,0,0,0.4)",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil",
-    "priority": true
+    "method": "Color pencil"
   },
   {
     "filename": "6.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil",
-    "priority": true
+    "method": "Color pencil"
   },
   {
     "filename": "7.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil & Marker",
-    "priority": true
+    "method": "Color pencil & Marker"
   },
   {
     "filename": "8.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Marker",
-    "priority": true
+    "method": "Marker"
   },
   {
     "filename": "9.jpg",
@@ -211,8 +204,7 @@
     "color": "rgba(0,0,0,0.4)",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Marker",
-    "priority": true
+    "method": "Marker"
   },
   {
     "filename": "30.jpg",
@@ -277,8 +269,7 @@
     "filename": "39.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil",
-    "priority": true
+    "method": "Color pencil"
   },
   {
     "filename": "40.jpg",
@@ -358,8 +349,7 @@
     "filename": "52.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Marker",
-    "priority": true
+    "method": "Marker"
   },
   {
     "filename": "53.jpg",
@@ -419,8 +409,7 @@
     "filename": "62.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil & Marker",
-    "priority": true
+    "method": "Color pencil & Marker"
   },
   {
     "filename": "63.jpg",
@@ -438,22 +427,19 @@
     "filename": "65.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil",
-    "priority": true
+    "method": "Color pencil"
   },
   {
     "filename": "66.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil",
-    "priority": true
+    "method": "Color pencil"
   },
   {
     "filename": "67.jpg",
     "author": "Kim Jiyu",
     "canvas": "150x150mm Colored paper",
-    "method": "Color pencil",
-    "priority": true
+    "method": "Color pencil"
   },
   {
     "filename": "68.jpg",
