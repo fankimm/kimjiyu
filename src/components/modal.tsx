@@ -25,6 +25,10 @@ const Modal = (props: {
     }
   }, []);
   const handleLikeClick = async () => {
+    if (!userId) {
+      alert("userId not found");
+      return;
+    }
     const isAlreadyLiked = dataOnlyAboutThis?.liked.some(
       (d) => d.userId === userId
     );

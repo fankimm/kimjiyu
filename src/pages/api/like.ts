@@ -50,7 +50,7 @@ export default async function handler(
     }
     if (method === "DELETE") {
       const key = id + userId;
-      const dbRes = await supabase.from("liked").delete().eq("key", key);
+      const dbRes = await supabase.from("liked").delete().eq("key", "asdf");
       // .upsert({ key, userId: body.userId, parentId: id });
       res.status(200).json({ status: 200, message: "삭제성공" });
     }
