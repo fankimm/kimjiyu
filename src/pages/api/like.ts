@@ -36,7 +36,7 @@ export default function handler(
       return item;
     });
     fs.readdir("./", (err, dir) => {
-      console.log(dir);
+      res.status(200).json({ status: 200, message: `${dir}`, body });
     });
     fs.writeFile(
       "./public/json/db.json",
