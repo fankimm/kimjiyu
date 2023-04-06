@@ -15,42 +15,47 @@ const Modal = (props: {
   setVisible: Dispatch<SetStateAction<boolean>>;
   setData: Dispatch<SetStateAction<IData[] | undefined>>;
   data: IData[] | undefined;
-  filename: string;
+  id: number;
 }) => {
-  const { children, visible, setVisible, setData, data, filename } = props;
-  const dataOnlyAboutThis = data?.find((item) => item.filename === filename);
-  const [id, setId] = useState("");
+  const { children, visible, setVisible, setData, data, id } = props;
+  const dataOnlyAboutThis = data?.find((item) => item.id === id);
+  const [userId, setUserId] = useState("");
   useEffect(() => {
-    const idFromLocalStorage = localStorage.getItem("id");
+    const idFromLocalStorage = localStorage.getItem("userId");
     if (idFromLocalStorage) {
-      setId(idFromLocalStorage);
+      setUserId(idFromLocalStorage);
     }
   }, []);
   const handleLikeClick = () => {
+    const isAlreadyLiked = dataOnlyAboutThis?.liked.some(
+      (d) => d.userId === userId
+    );
     const param = {
-      filename,
       id,
+      userId,
     };
     fetch("/api/like", {
-      method: "POST",
+      method: isAlreadyLiked ? "DELETE" : "POST",
       body: JSON.stringify(param),
     })
       .then((res) => {
         return res.json();
       })
       .then((res) => {
-        if (res.status === 200) {
+        if (res.status >= 200 && res.status < 400) {
           setData((prev) => {
             return prev?.map((p) => {
-              if (p.filename === dataOnlyAboutThis?.filename) {
-                const id = localStorage.getItem("id");
-                if (id) {
-                  const isAlreadyLiked = p.liked.includes(id);
+              if (p.id === dataOnlyAboutThis?.id) {
+                const userId = localStorage.getItem("userId");
+                if (userId) {
+                  const isAlreadyLiked = p.liked.some(
+                    (l) => l.userId === userId
+                  );
                   return {
                     ...p,
                     liked: isAlreadyLiked
-                      ? p.liked.filter((l) => l !== id)
-                      : [...p.liked, id],
+                      ? p.liked.filter((l) => l.userId !== userId)
+                      : [...p.liked, { userId }],
                   };
                 }
               }
@@ -77,22 +82,18 @@ const Modal = (props: {
         }}
       >
         <div className={styles.modalContents}>
-          <div style={{ width: "50px" }} onClick={handleLikeClick}>
-            <FontAwesomeIcon
-              className={styles.modalLike}
-              icon={faHeart}
-              size="2xl"
-              style={{
-                color: data
-                  ?.find(
-                    (item) => item.filename === dataOnlyAboutThis?.filename
-                  )
-                  ?.liked.includes(id)
-                  ? "red"
-                  : dataOnlyAboutThis?.color,
-              }}
-            />
+          <div
+            onClick={handleLikeClick}
+            className={styles.modalLike}
+            style={{
+              color: dataOnlyAboutThis?.liked.find((l) => l.userId === userId)
+                ? "red"
+                : dataOnlyAboutThis?.color,
+            }}
+          >
+            ♥️
           </div>
+
           {children}
           <div
             className={styles.modalDescription}

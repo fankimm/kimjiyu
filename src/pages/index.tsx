@@ -4,26 +4,27 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Modal from "@/components/modal";
 export interface IData {
+  id: number;
   filename: string;
   color?: string;
   author: string;
   canvas: string;
   method: string;
   priority?: boolean;
-  liked: string[];
+  liked: { userId: string }[];
 }
-import db from "../../public/json/db.json";
 import uuid from "react-uuid";
-export default function Home() {
+import { createClient } from "@supabase/supabase-js";
+export default function Home({ ssrData }: { ssrData: IData[] }) {
   const [modalVisible, setmodalVisible] = useState(false);
   const [selectedData, setSelectedData] = useState<IData | undefined>();
-  const [data, setData] = useState<IData[] | undefined>();
+  const [data, setData] = useState<IData[] | undefined>(ssrData);
   useEffect(() => {
-    const id = localStorage.getItem("id");
+    const id = localStorage.getItem("userId");
     if (!id) {
-      localStorage.setItem("id", uuid());
+      localStorage.setItem("userId", uuid());
     }
-    setData(db);
+    // setData(db);
   }, []);
   return (
     <>
@@ -52,7 +53,7 @@ export default function Home() {
         setData={setData}
         visible={modalVisible}
         setVisible={setmodalVisible}
-        filename={selectedData?.filename || ""}
+        id={selectedData?.id || -1}
       >
         <Image
           className={styles.modalImage}
@@ -70,4 +71,18 @@ export default function Home() {
       </Modal>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  let url = "";
+  if (process.env.NODE_ENV === "development") {
+    url = "http://localhost:3000/api/like";
+  }
+  if (process.env.NODE_ENV === "production") {
+    url = process.env.API_ENDPOINT || "";
+  }
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log("data", data);
+  return { props: { ssrData: data.data } };
 }
