@@ -91,7 +91,7 @@ const Modal = (props: {
                 : dataOnlyAboutThis?.color,
             }}
           >
-            ♥️
+            ❤︎
           </div>
 
           {children}

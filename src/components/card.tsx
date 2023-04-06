@@ -11,7 +11,7 @@ const Card = (props: {
       <div className={styles.cardContents}>{props.children}</div>
       <div className={styles.cardDiscription}>
         <div>{props?.cardContentData?.canvas}</div>
-        <div>{`♥️ ${props?.cardContentData?.liked.length}`}</div>
+        <div>{`❤︎ ${props?.cardContentData?.liked.length || ""}`}</div>
       </div>
     </div>
   );
