@@ -32,7 +32,14 @@
   position: fixed;
   bottom: 5%;
   left: 5%;
-  z-index: 4;
+  z-index: 5;
+}
+
+.modalLike {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 5;
 }
 
 .modalImage {

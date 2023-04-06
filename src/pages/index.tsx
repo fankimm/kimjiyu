@@ -12,6 +12,8 @@ export interface IData {
   priority?: boolean;
 }
 import db from "@/json/db.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 export default function Home() {
   const [modalVisible, setmodalVisible] = useState(false);
   const [selectedData, setSelectedData] = useState<IData | undefined>();
@@ -21,6 +23,12 @@ export default function Home() {
   }, []);
   return (
     <>
+      <FontAwesomeIcon
+        className={styles.modalLike}
+        icon={faHeart}
+        // rotation={90}
+        size="xs"
+      />
       <div className={styles.galleryContainer}>
         {data?.map((item) => (
           <Card key={item.filename} cardContentData={item}>
