@@ -37,19 +37,19 @@ export default async function handler(
       data: dbRes.data ? dbRes.data : [],
     });
   }
+  const { id, userId } = JSON.parse(req.body);
+  if (!id || !userId) {
+    res.status(400).json({ status: 400, message: "Bad Request" });
+  }
   if (method === "POST") {
-    const body = JSON.parse(req.body);
-    const { id } = body;
-    const key = body.id + body.userId;
+    const key = id + userId;
     const dbRes = await supabase
       .from("liked")
-      .upsert({ key, userId: body.userId, parentId: id });
+      .upsert({ key, userId, parentId: id });
     res.status(200).json({ status: 200, message: "생성성공" });
   }
   if (method === "DELETE") {
-    const body = JSON.parse(req.body);
-    const { id } = body;
-    const key = body.id + body.userId;
+    const key = id + userId;
     const dbRes = await supabase.from("liked").delete().eq("key", key);
     // .upsert({ key, userId: body.userId, parentId: id });
     res.status(200).json({ status: 200, message: "삭제성공" });

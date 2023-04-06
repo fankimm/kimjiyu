@@ -7,7 +7,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 const Modal = (props: {
   children: ReactNode;
   visible: boolean;
