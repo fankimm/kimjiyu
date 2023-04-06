@@ -27,27 +27,27 @@ export default function handler(
   fs.readdir("./", (err, dir) => {
     res.status(200).json({ status: 200, message: `${dir}`, body });
   });
-  fs.readFile("./public/json/db.json", "utf-8", (_error, file) => {
-    const data: IData[] = JSON.parse(file);
-    const temp = data.map((item) => {
-      if (item.filename === filename) {
-        if (item.liked.includes(id)) {
-          return { ...item, liked: item.liked.filter((l) => l !== id) };
-        }
-        return { ...item, liked: [...item.liked, id] };
-      }
-      return item;
-    });
-    fs.writeFile(
-      "./public/json/db.json",
-      JSON.stringify(temp),
-      "utf-8",
-      (error) => {
-        if (error) {
-          console.error(error);
-        }
-      }
-    );
-  });
-  res.status(200).json({ status: 200, message: "John Doe", body });
+  // fs.readFile("./public/json/db.json", "utf-8", (_error, file) => {
+  //   const data: IData[] = JSON.parse(file);
+  //   const temp = data.map((item) => {
+  //     if (item.filename === filename) {
+  //       if (item.liked.includes(id)) {
+  //         return { ...item, liked: item.liked.filter((l) => l !== id) };
+  //       }
+  //       return { ...item, liked: [...item.liked, id] };
+  //     }
+  //     return item;
+  //   });
+  //   fs.writeFile(
+  //     "./public/json/db.json",
+  //     JSON.stringify(temp),
+  //     "utf-8",
+  //     (error) => {
+  //       if (error) {
+  //         console.error(error);
+  //       }
+  //     }
+  //   );
+  // });
+  // res.status(200).json({ status: 200, message: "John Doe", body });
 }
