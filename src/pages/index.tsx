@@ -12,7 +12,7 @@ export interface IData {
   priority?: boolean;
   liked: string[];
 }
-import db from "@/json/db.json";
+import db from "../../public/json/db.json";
 import uuid from "react-uuid";
 export default function Home() {
   const [modalVisible, setmodalVisible] = useState(false);

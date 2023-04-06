@@ -6,7 +6,10 @@
     "canvas": "150x150mm Colored paper",
     "method": "Color pencil",
     "priority": true,
-    "liked": []
+    "liked": [
+      "8c2d2ee0-28f4-9341-fddd-00ca2af7607c",
+      "ac59a9c7-8664-4723-5b2d-8e76dfc4dad9"
+    ]
   },
   {
     "filename": "1.jpg",
@@ -15,7 +18,7 @@
     "canvas": "150x150mm Colored paper",
     "method": "Color pencil",
     "priority": true,
-    "liked": []
+    "liked": ["8c2d2ee0-28f4-9341-fddd-00ca2af7607c"]
   },
   {
     "filename": "2.jpg",

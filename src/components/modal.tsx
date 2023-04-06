@@ -26,6 +26,42 @@ const Modal = (props: {
       setId(idFromLocalStorage);
     }
   }, []);
+  const handleLikeClick = () => {
+    const param = {
+      filename,
+      id,
+    };
+    fetch("/api/like", {
+      method: "POST",
+      body: JSON.stringify(param),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        if (res.status === 200) {
+          setData((prev) => {
+            return prev?.map((p) => {
+              if (p.filename === dataOnlyAboutThis?.filename) {
+                const id = localStorage.getItem("id");
+                if (id) {
+                  const isAlreadyLiked = p.liked.includes(id);
+                  return {
+                    ...p,
+                    liked: isAlreadyLiked
+                      ? p.liked.filter((l) => l !== id)
+                      : [...p.liked, id],
+                  };
+                }
+              }
+              return p;
+            });
+          });
+        } else {
+          alert(JSON.stringify(res));
+        }
+      });
+  };
   if (visible) {
     return (
       <div
@@ -37,29 +73,7 @@ const Modal = (props: {
         }}
       >
         <div className={styles.modalContents}>
-          <div
-            style={{ width: "50px" }}
-            onClick={(e) => {
-              console.log("clicked");
-              setData((prev) => {
-                return prev?.map((p) => {
-                  if (p.filename === dataOnlyAboutThis?.filename) {
-                    const id = localStorage.getItem("id");
-                    if (id) {
-                      const isAlreadyLiked = p.liked.includes(id);
-                      return {
-                        ...p,
-                        liked: isAlreadyLiked
-                          ? p.liked.filter((l) => l !== id)
-                          : [...p.liked, id],
-                      };
-                    }
-                  }
-                  return p;
-                });
-              });
-            }}
-          >
+          <div style={{ width: "50px" }} onClick={handleLikeClick}>
             <FontAwesomeIcon
               className={styles.modalLike}
               icon={faHeart}
