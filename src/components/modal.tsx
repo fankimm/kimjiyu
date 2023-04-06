@@ -58,8 +58,12 @@ const Modal = (props: {
             });
           });
         } else {
-          alert(JSON.stringify(res));
+          alert("좋아요 실패 했습니다.");
+          alert(`else : ${res}`);
         }
+      })
+      .catch((err) => {
+        alert(`catch : ${err}`);
       });
   };
   if (visible) {
