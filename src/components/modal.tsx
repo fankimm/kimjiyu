@@ -26,7 +26,7 @@ const Modal = (props: {
       setUserId(idFromLocalStorage);
     }
   }, []);
-  const handleLikeClick = () => {
+  const handleLikeClick = async () => {
     const isAlreadyLiked = dataOnlyAboutThis?.liked.some(
       (d) => d.userId === userId
     );
@@ -34,7 +34,7 @@ const Modal = (props: {
       id,
       userId,
     };
-    fetch("/api/like", {
+    await fetch("/api/like", {
       method: isAlreadyLiked ? "DELETE" : "POST",
       body: JSON.stringify(param),
     })
