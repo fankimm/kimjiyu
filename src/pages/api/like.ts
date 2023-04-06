@@ -46,12 +46,13 @@ export default async function handler(
       const dbRes = await supabase
         .from("liked")
         .upsert({ key, userId, parentId: id });
+      console.log(dbRes);
       res.status(200).json({ status: 200, message: "생성성공" });
     }
     if (method === "DELETE") {
       const key = id + userId;
       const dbRes = await supabase.from("liked").delete().eq("key", key);
-      // .upsert({ key, userId: body.userId, parentId: id });
+      console.log(dbRes);
       res.status(200).json({ status: 200, message: "삭제성공" });
     }
   }

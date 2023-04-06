@@ -66,7 +66,6 @@ export default function Home({ ssrData }: { ssrData: IData[] }) {
 }
 
 export async function getServerSideProps() {
-  console.log(process.env.API_ENDPOINT);
   let domain = "";
   if (process.env.NODE_ENV === "development") {
     domain = "http://localhost:3000";
