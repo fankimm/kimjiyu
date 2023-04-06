@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import uuid from "react-uuid";
+import { Analytics } from "@vercel/analytics/react";
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const userId = localStorage.getItem("userId");
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <>
+      <Analytics />
       <GlobalNav />
       <Layout>
         <Component {...pageProps} />
