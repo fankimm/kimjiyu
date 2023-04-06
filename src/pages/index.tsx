@@ -1,14 +1,15 @@
 import styles from "@/styles/150.module.css";
 import Card from "@/components/card";
 import Image from "next/image";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "@/components/modal";
 export interface IData {
   filename: string;
   color?: string;
-  author:string;
-  canvas:string;
-  method:string;
+  author: string;
+  canvas: string;
+  method: string;
+  priority?: boolean;
 }
 import db from "@/json/db.json";
 export default function Home() {
@@ -22,18 +23,19 @@ export default function Home() {
     <>
       <div className={styles.galleryContainer}>
         {data?.map((item) => (
-            <Card key={item.filename} cardContentData={item}>
-              <Image
-                src={"/gallery/" + item.filename}
-                fill
-                sizes="100%"
-                alt="gal"
-                onClick={() => {
-                  setSelectedData(item);
-                  setmodalVisible(true);
-                }}
-              ></Image>
-            </Card>
+          <Card key={item.filename} cardContentData={item}>
+            <Image
+              priority={item.priority ?? false}
+              src={"/gallery/" + item.filename}
+              fill
+              sizes="100%"
+              alt="gal"
+              onClick={() => {
+                setSelectedData(item);
+                setmodalVisible(true);
+              }}
+            ></Image>
+          </Card>
         ))}
       </div>
       <Modal

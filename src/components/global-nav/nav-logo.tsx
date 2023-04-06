@@ -7,7 +7,7 @@ export default function Logo() {
   return (
     <Link href="/" className={styles.logo}>
       <div className={styles.logoName}>KIM JIYÜ</div>
-      <div className={styles.logoDescription}>MAN{diff} YEARS OLD</div>
+      <div className={styles.logoDescription}>MAN {diff} YEARS OLD</div>
     </Link>
   );
 }
