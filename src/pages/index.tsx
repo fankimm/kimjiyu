@@ -74,15 +74,15 @@ export default function Home({ ssrData }: { ssrData: IData[] }) {
 }
 
 export async function getServerSideProps() {
-  let url = "";
+  console.log(process.env.API_ENDPOINT);
+  let domain = "";
   if (process.env.NODE_ENV === "development") {
-    url = "http://localhost:3000/api/like";
+    domain = "http://localhost:3000";
   }
   if (process.env.NODE_ENV === "production") {
-    url = process.env.API_ENDPOINT || "";
+    domain = process.env.API_ENDPOINT || "";
   }
-  const res = await fetch(url);
+  const res = await fetch(`${domain}/api/like`);
   const data = await res.json();
-  console.log("data", data);
   return { props: { ssrData: data.data } };
 }
