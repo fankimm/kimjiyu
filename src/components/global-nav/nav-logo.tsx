@@ -6,8 +6,8 @@ export default function Logo() {
   const diff = today.getFullYear() - birth.getFullYear();
   return (
     <Link href="/" className={styles.logo}>
-      <div className={styles.logoName}>KIM JIYU</div>
-      <div className={styles.logoDescription}>MAN {diff} YEARS OLD</div>
+      <div className={styles.logoName}>KIM JIYÜ</div>
+      <div className={styles.logoDescription}>MAN{diff} YEARS OLD</div>
     </Link>
   );
 }
