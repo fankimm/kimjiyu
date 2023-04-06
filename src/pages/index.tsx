@@ -30,7 +30,7 @@ export default function Home({ ssrData }: { ssrData: IData[] }) {
     <>
       <div className={styles.galleryContainer}>
         {data?.map((item) => (
-          <Card key={item.filename} cardContentData={item}>
+          <Card key={item.id} cardContentData={item}>
             <Image
               className={styles.cardImage}
               priority={item.priority ?? false}

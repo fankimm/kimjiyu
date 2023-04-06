@@ -18,6 +18,8 @@
   overflow: hidden;
 }
 .cardDiscription {
+  display: flex;
+  justify-content: space-between;
   font-size: 12px;
   color: var(--light-font-color);
 }

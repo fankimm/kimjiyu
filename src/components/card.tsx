@@ -1,5 +1,5 @@
 import { IData } from "@/pages";
-import styles from "@/styles/Card.module.css";
+import styles from "../styles/Card.module.css";
 import React, { ReactNode } from "react";
 
 const Card = (props: {
@@ -10,7 +10,8 @@ const Card = (props: {
     <div className={styles.card}>
       <div className={styles.cardContents}>{props.children}</div>
       <div className={styles.cardDiscription}>
-        {props?.cardContentData?.canvas}
+        <div>{props?.cardContentData?.canvas}</div>
+        <div>{`♥️ ${props?.cardContentData?.liked.length}`}</div>
       </div>
     </div>
   );
