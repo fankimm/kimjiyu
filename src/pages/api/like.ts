@@ -35,6 +35,9 @@ export default function handler(
       }
       return item;
     });
+    fs.readdir("./", (err, dir) => {
+      console.log(dir);
+    });
     fs.writeFile(
       "./public/json/db.json",
       JSON.stringify(temp),
