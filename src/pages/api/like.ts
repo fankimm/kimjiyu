@@ -24,6 +24,9 @@ export default function handler(
   }
   const body = JSON.parse(req.body);
   const { filename, id }: { filename: string; id: string } = body;
+  fs.readdir("./", (err, dir) => {
+    res.status(200).json({ status: 200, message: `${dir}`, body });
+  });
   fs.readFile("./public/json/db.json", "utf-8", (_error, file) => {
     const data: IData[] = JSON.parse(file);
     const temp = data.map((item) => {
@@ -34,9 +37,6 @@ export default function handler(
         return { ...item, liked: [...item.liked, id] };
       }
       return item;
-    });
-    fs.readdir("./", (err, dir) => {
-      res.status(200).json({ status: 200, message: `${dir}`, body });
     });
     fs.writeFile(
       "./public/json/db.json",
