@@ -34,38 +34,29 @@ const Modal = (props: {
       id,
       userId,
     };
+    setData((prev) => {
+      return prev?.map((p) => {
+        if (p.id === dataOnlyAboutThis?.id) {
+          const userId = localStorage.getItem("userId");
+          if (userId) {
+            const isAlreadyLiked = p.liked.some((l) => l.userId === userId);
+            return {
+              ...p,
+              liked: isAlreadyLiked
+                ? p.liked.filter((l) => l.userId !== userId)
+                : [...p.liked, { userId }],
+            };
+          }
+        }
+        return p;
+      });
+    });
     await fetch("/api/like", {
       method: isAlreadyLiked ? "DELETE" : "POST",
       body: JSON.stringify(param),
     })
       .then((res) => {
         return res.json();
-      })
-      .then((res) => {
-        if (res.status >= 200 && res.status < 400) {
-          setData((prev) => {
-            return prev?.map((p) => {
-              if (p.id === dataOnlyAboutThis?.id) {
-                const userId = localStorage.getItem("userId");
-                if (userId) {
-                  const isAlreadyLiked = p.liked.some(
-                    (l) => l.userId === userId
-                  );
-                  return {
-                    ...p,
-                    liked: isAlreadyLiked
-                      ? p.liked.filter((l) => l.userId !== userId)
-                      : [...p.liked, { userId }],
-                  };
-                }
-              }
-              return p;
-            });
-          });
-        } else {
-          alert("좋아요 실패 했습니다.");
-          alert(`else : ${res}`);
-        }
       })
       .catch((err) => {
         alert(`catch : ${err}`);
