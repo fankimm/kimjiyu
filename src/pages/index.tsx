@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.css";
 import Card from "@/components/card";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "@/components/modal";
 export interface IData {
   id: number;
@@ -13,19 +13,11 @@ export interface IData {
   priority?: boolean;
   liked: { userId: string }[];
 }
-import uuid from "react-uuid";
-import { createClient } from "@supabase/supabase-js";
 export default function Home({ ssrData }: { ssrData: IData[] }) {
   const [modalVisible, setmodalVisible] = useState(false);
   const [selectedData, setSelectedData] = useState<IData | undefined>();
   const [data, setData] = useState<IData[] | undefined>(ssrData);
-  useEffect(() => {
-    const id = localStorage.getItem("userId");
-    if (!id) {
-      localStorage.setItem("userId", uuid());
-    }
-    // setData(db);
-  }, []);
+
   return (
     <>
       <div className={styles.galleryContainer}>
