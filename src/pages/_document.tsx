@@ -19,7 +19,6 @@ e.async=true;e.src=de;r=t.getElementsByTagName(but)[0];
 r.parentNode.insertBefore(e, r);
 })("CodenButter", "https://buttr.dev/butter.js", window, "script", document);
 window.CodenButter("boot", { siteId: "derawretzo", auto: true });</script>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
         <Main />
