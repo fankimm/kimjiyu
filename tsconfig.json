@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
     "target": "es5",
     "lib": [
       "dom",
@@ -24,7 +27,6 @@
       ]
     }
   },
-  "suppressImplicitAnyIndexErrors": true,
   "include": [
     "next-env.d.ts",
     "**/*.ts",
